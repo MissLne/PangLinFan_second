@@ -1,0 +1,33 @@
+.center{
+     margin: 0 auto;
+}
+.clearfix{
+     clear: both;
+}
+.floatR{
+     float: right;
+}
+.floatL{
+     float: left;
+}
+.marginL20{
+     margin-left: 20px;
+     transform: translateY();
+}
+.marginR10{
+     margin-right: 10px;
+}
+.colorGreen {
+     color: #60C84D;
+}
+.colorBlue {
+     color: #50C8FD;
+}
+
+.colorRed {
+     color: #FC824B;
+}
+._margin {
+     margin: 0 .6vw;
+}
+
