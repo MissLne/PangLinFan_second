@@ -8,7 +8,14 @@
      box-sizing: border-box;
 }
 body {
-     background: #f6f6f6;
+     background: #F6F6F6;
+}
+.myMaterial {
+     display: none;
+     margin-top: 60px;
+}
+#konw {
+     display: none;
 }
 @font-face {
      font-family: 'iconfont';
@@ -58,6 +65,7 @@ header h1 a {
      cursor: pointer;
 }
 .head_btn li img {
+     width: 32px;
      height: 32px;
      margin: 9px 0;
 }
@@ -82,7 +90,11 @@ header h1 a {
 .head_container2 .head_tab li:nth-child(1){
      color: #0084FF;
 }
-.head_tab li:hover {
+.head_tab li:hover,
+.article_comment:hover,
+.article_share:hover,
+.article_collect:hover,
+.article_like:hover {
      color: #444;
 }
 .head_search input {
@@ -119,6 +131,28 @@ header h1 a {
 }
 .head_search button:hover {
      background: #0077E6;
+}
+#the_tip {
+     z-index: 100;
+     width: 1030px;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+}
+#the_tip ul:nth-child(1){
+     width: 70px;
+     height: 100px;
+     text-align: center;
+     line-height: 30px;
+     background: #fff;
+     box-shadow: 0 0 5px 1px #E6E6E6;
+     display: none;
+}
+#the_tip ul:nth-child(1) li {
+     cursor: pointer;
+}
+#the_tip ul:nth-child(1) li:hover{
+     background: #f6f6f6;
 }
 #container {
      width: 1000px;
@@ -489,7 +523,7 @@ header h1 a {
 .before_content:hover {
      color: #666464;
 }
-.before_btn {
+.main_article .before_btn {
      color: rgb(24, 50, 136);
      cursor: pointer;
 }
@@ -500,7 +534,11 @@ header h1 a {
      font-size: small;
      font-weight: bold;
 }
-
+.after_introduce {
+     color: #9c9c9c;
+     font-size: 14px;
+     margin-left: 10px;
+}
 .article_do{
      margin-top: 10px;
      padding: 0 20px 20px 20px;
@@ -516,6 +554,8 @@ header h1 a {
      text-align: center;
      line-height: 35px;
      border-radius: 4px;
+     margin: 10px;
+     
 }
 .article_do .article_agree:hover,
 .article_do .article_disagree:hover {
@@ -533,7 +573,7 @@ header h1 a {
 }
 .article_do span:nth-child(1),
 .article_do span:nth-child(2) {
-     margin: 0;
+     margin-left: 0;
 }
 .article_do span:nth-child(2) {
      margin-right: 13px;
@@ -551,6 +591,10 @@ header h1 a {
 .article_stop .iconfont {
      font-size: 12px;
 }
+.after_img {
+     width: 30px;
+     border-radius: 3px;
+}
 .after_agree,
 .after_date {
      margin: 15px 0;
@@ -561,12 +605,148 @@ header h1 a {
 .after_date:hover {
      text-decoration: underline;
 }
-
-#know{
-     display: none;
+.article_more {
+     position: relative;
 }
 
+.mat_box {
+     width: 1000px;
+     height: 1000px;
+     margin: 0 auto;
+     background: #fff;
+     box-shadow: 0 0 5px 1px #E6E6E6;
+     position: relative;
+     z-index: 3;
+}
+.mat_header{
+     background: #F6F6F6;
+     width: 1000px;
+     height: 300px;
 
+}
+.mat_head {
+     width: 170px;
+     height: 170px;
+     border: 5px solid #fff;
+     border-radius: 5px;
+     background: url(images/timg.jpg) no-repeat;
+     background-size: 100% 100%;
+     position: absolute;
+     top: 270px;
+     left: 30px;
+}
+.mat_head::before {
+     content: '';
+     display: inline-block;
+     width: 160px;
+     height: 160px;
+     color: #fff;
+     font-size: 20px;
+     text-align: center;
+     line-height: 170px;
+     background: rgba(0, 0, 0,0.3);
+     cursor: pointer;
+}
+.goback {
+     color: #1751B3;
+     font-size: 15px;
+     text-decoration: underline;
+     cursor: pointer;
+}
+ #myfile {
+    opacity: 0;
+    cursor: pointer;
+    transform: translate(30px,-100px);
+}
+#myBtn {
+     color: #fff;
+     font-size: 17px;
+     white-space: nowrap;
+     transform: translate(50px,-100px);
+     background: none;
+     border: none;
+}
+.myMaterial table {
+     width: 600px;
+     margin: 0 auto;
+     margin-top: 50px;
+     font-size: 17px;
+     font-weight: bold;
+}
+.myMaterial tr {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(156, 156, 156,0.2);
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+.mat_name {
+     display: inline-block;
+     white-space: nowrap;
+     width: 80px;
+}
+.myMaterial .mat_name1{
+     font-size: 30px;
+}
+.mat_input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
+}
+.myMaterial button {
+     width: 60px;
+     height: 35px;
+     margin-top: 5px;
+     border-radius: 5px;
+     cursor: pointer;
+}
+.mat_preserve {
+     color: #fff;
+     background: #0084FF;
+     border: none;
+}
+.mat_preserve:hover {
+     background: #0077E6;
+}
+.mat_cancel {
+     color: #9c9c9c;
+     background: none;
+     border: 1px solid #9c9c9c;
+}
+.myMaterial .mat_update {
+     font-weight: normal;
+     font-size: 15px;
+     color: #1751B3;
+     cursor: pointer;
+}
+.mat_update1 {
+     opacity: 0;
+     transition: .2s;
+}
+.tr_input {
+     display: none;
+}
+.myMaterial .lastTd {
+     font-weight: normal;
+     font-size: 13px;
+}
+.lastTd {
+     transform: translateX(-100px);
+     display: inline-block;
+     width: 100px;
+     text-align: left;
+}
+._lastTd {
+     transform: translateX(-30px);
+     width: 250px;
+}
+.myMaterial .last_td{
+     transform: translateX(-280px);
+}
+.myMaterial .thelast_td{
+     transform: translateX(-100px);
+}
 #logon {
      width: 100vw;
      height: 100vh;
@@ -575,7 +755,7 @@ header h1 a {
      position: relative;
      min-width: 900px;
 }
-#logon form img {
+#logon>img {
      width: 8vw;
      position: absolute;
      left: 50%;

@@ -6,18 +6,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="js/LneDemo1.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="css/LneDemo.css">
     <title>Document</title>
-
 </head>
+
 <body>
-<div id="know" style="display: block;" >
+<div id="know">
     <header>
         <div class="head_container1 center clearfix">
             <ul class="head_btn floatR">
                 <li><span class="iconfont">&#xe976;</span></li>
                 <li><span class="iconfont">&#xe8c6;</span></li>
-                <li><img src="css/images/touxiang.jpg"></li>
+                <li class="head_sculpture"><img src="css/images/touxiang.jpg">
+                </li>
             </ul> 
             <h1 class="floatL"><a href="#">知乎</a></h1>
             <div>
@@ -55,6 +60,12 @@
              
         </div>
     </header>
+    <div id="the_tip">
+         <ul class="floatR tip_logout">
+             <li class="logout">退出</li>
+             <li class="material">我的资料</li>
+         </ul>
+    </div>
     <div id="container" class="clearfix center">
     <div id="body_box" class="floatR">
         <div class="massage">
@@ -164,8 +175,8 @@
              <li>关注</li>
              <li>热榜</li>
          </ul>
-        <div class="main_article">
-            <div class="article_before">
+       
+            <!-- <div class="article_before">
                 <h3 class="before_title"></h3>
                 <span class="before_userid"></span>
                 <span class="before_content"></span>
@@ -199,679 +210,14 @@
                     <span class="iconfont">&#xe646;</span>
                 </span>
                 </span>
-            </div>
+            </div> -->
 
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-        <div class="main_article">
-            <div class="article_before">
-                <h3 class="before_title"></h3>
-                <span class="before_userid"></span>
-                <span class="before_content"></span>
-                <span class="before_btn">阅读全文
-                    <span class="iconfont">&#xe502;</span>
-                </span>
-            </div>
-
-            <div class="article_after">
-                <h3 class="after_title"></h3>
-                <img class="after_img" src="#">
-                <span class="after_userid"></span> 
-                <span class="after_introduce"></span>
-                <p class="after_agree"></p>  
-                <p class="after_content"></p>
-                <p class="after_date"></p>
-            </div>
-            <div class="article_do">
-                <span class="article_agree iconfont">&#xe61d; 赞同</span>
-                <span class="article_disagree iconfont">&#xe640;</span>
-                <span class="article_comment iconfont">&#xe650;</span>
-                <span class="article_share iconfont">&#xe505; 分享</span>
-                <span class="article_collect iconfont">&#xe604; 收藏</span>
-                <span class="article_like"> 
-                    <span class="iconfont">&#xe51a;</span>
-                    喜欢
-                </span>
-                <span class="article_more iconfont">&#xe66a;</span>
-                <span class="article_stop floatR"> 
-                    收起
-                    <span class="iconfont">&#xe646;</span>
-                </span>
-                </span>
-            </div>
-            
-        </div>
-
-
+            <div class="main_article"></div>
             
     </div>
     </div>
 </div>
-<div id="logon" style="display: none;">
+<div id="logon">
 
         
     
@@ -894,7 +240,7 @@
                 <span class="floatR">忘记密码？</span>
             </li>
             <li>
-                <button class="logon_button">登录</button>
+                <button class="logon_button" type="button">登录</button>
             </li>
             <li>
                 未注册手机验证后自动登录，注册即代表同意<span>《知乎协议》</span>
@@ -944,12 +290,89 @@
         </li>
     </ul>
 </div>
+<div class="myMaterial">
+    <div class="mat_box">
+        <div class="mat_header"></div>
+        <span class="goback floatR">返回主页</span>
+        <div class="mat_head">
+                <input type="file" name="" id="myfile">
+                <button type="submit" id="myBtn">修改头像</button>
+        </div>
+       <table>
+           <tr>
+               <td class="mat_name mat_name1">姓名</td>
+               <td class="tr_input">
+                    <input type="text" class="mat_input mat_input0"><br/>
+                    <button type="submit" class="mat_preserve">保存</button>
+                    <button type="button" class="mat_cancel">取消</button>
+                
+            </td>
+            <td  class="last_td">
+                <span class="mat_update iconfont mat_update1">修改&#xe608;</span>
+            </td>
+           </tr>
+           <tr>
+               <td class="mat_name">性别</td>
+               <td class="tr_input">
+                    <input type="text" class="mat_input mat_input1"><br/>
+                    <button type="submit" class="mat_preserve">保存</button>
+                    <button type="button" class="mat_cancel">取消</button>
+                    <td><span class="lastTd"></span></td>
+                    <td  class="last_td">
+                        
+                        <span class="mat_update iconfont">填写&#xe608;</span>
+                    </td>
+           </tr>
+           <tr>
+               <td class="mat_name">一句话介绍</td>
+               <td class="tr_input">
+                <input type="text" class="mat_input mat_input2"><br/>
+                <button type="submit" class="mat_preserve">保存</button>
+                <button type="button" class="mat_cancel">取消</button>
+                <td><span class="lastTd"></span></td>
+                <td  class="last_td">
+                    
+                    <span class="mat_update iconfont">填写&#xe608;</span>
+                </td>
+           </tr>
+           <tr>
+               <td class="mat_name">所在行业</td>
+               <td class="tr_input">
+                <input type="text" class="mat_input mat_input3"><br/>
+                <button type="submit" class="mat_preserve">保存</button>
+                <button type="button" class="mat_cancel">取消</button>
+                <td><span class="lastTd"></span></td>
+                <td  class="last_td">
+                    
+                    <span class="mat_update iconfont">填写&#xe608;</span>
+                </td>
+           </tr>
+           <tr>
+               <td class="mat_name">个人简介</td>
+               <td class="tr_input">
+                <input type="text" class="mat_input mat_input4"><br/>
+                <button type="submit" class="mat_preserve">保存</button>
+                <button type="button" class="mat_cancel">取消</button>
+                <br/>
+                <td><span class="lastTd _lastTd"></span></td>
+                <td  class="last_td thelast_td">
+                     
+                    <span class="mat_update iconfont">填写&#xe608;</span>
+                </td>
+           </tr>
+       </table>
+
+
+    </div>
+</div>
 <ul id="Box">
     <li class="massage_box iconfont">&#xe659;</li>
     <li class="massage_box iconfont">&#xe53a;</li>
 </ul>
 </body>
+
+
 <script type="text/javascript" src="js/LneDemo.js"></script>
-<script type="text/javascript" src="js/LneDemo1.js"></script>
+
 
 </html>
