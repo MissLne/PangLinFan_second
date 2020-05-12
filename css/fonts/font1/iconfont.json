@@ -20,6 +20,13 @@
       "unicode_decimal": 58948
     },
     {
+      "icon_id": "791959",
+      "name": "踩",
+      "font_class": "dianzan",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
       "icon_id": "848826",
       "name": "聊天",
       "font_class": "liaotian",
@@ -286,6 +293,13 @@
       "unicode_decimal": 58885
     },
     {
+      "icon_id": "8042726",
+      "name": "回复",
+      "font_class": "huifu",
+      "unicode": "e528",
+      "unicode_decimal": 58664
+    },
+    {
       "icon_id": "8398783",
       "name": "心 爱心-111",
       "font_class": "xinaixin",
@@ -347,6 +361,20 @@
       "font_class": "ziyuan",
       "unicode": "e637",
       "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "11056365",
+      "name": "红旗",
+      "font_class": "hongqi",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "11076659",
+      "name": "点赞",
+      "font_class": "dianzan1",
+      "unicode": "e506",
+      "unicode_decimal": 58630
     },
     {
       "icon_id": "11295525",

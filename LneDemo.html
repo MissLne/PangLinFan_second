@@ -7,19 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script type="text/javascript" src="js/jquery.js"></script>
-    <!-- <script type="text/javascript" src="js/LneDemo1.js"></script> -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <link rel="stylesheet" href="css/LneDemo.css">
     <title>Document</title>
 </head>
 
 <body>
+<!-- 知乎主页页面 -->
 <div id="know">
     <header>
         <div class="head_container1 center clearfix">
             <ul class="head_btn floatR">
-                <li><span class="iconfont">&#xe976;</span></li>
+                <li><span class="iconfont head_friends">&#xe976;</span></li>
                 <li><span class="iconfont">&#xe8c6;</span></li>
                 <li class="head_sculpture"><img src="css/images/touxiang.jpg">
                 </li>
@@ -64,7 +63,12 @@
          <ul class="floatR tip_logout">
              <li class="logout">退出</li>
              <li class="material">我的资料</li>
+             <li class="backToLogon">登录页面</li>
          </ul>
+         <div class="tip_friends floatR">
+           <div class="friend_title">好友列表</div>
+           <ul class="friend_ul"></ul>
+         </div>
     </div>
     <div id="container" class="clearfix center">
     <div id="body_box" class="floatR">
@@ -217,11 +221,11 @@
     </div>
     </div>
 </div>
+<!-- 登录页面 -->
 <div id="logon">
 
-        
-    
-        <img src="css/images/logon_hd.png">
+    <div class="logon_div">
+        <img src="css/images/logon_hd.png" class="logon_logo">
         <ul class="logon_container">
             <li>
                 <span>免密码登录</span>
@@ -231,8 +235,9 @@
                 <input type="text" value="手机号或邮箱" class="logon_account">
             </li>
             <li>
-                <div class="logon_pd">密码</div>
+                
                 <input type="password" class="logon_password">
+                <div class="logon_pd">密码</div>
                 <span class="iconfont logon_eye">&#xe503;</span>
             </li>
             <li>
@@ -261,7 +266,7 @@
                 <span class="iconfont floatR">&#xe519; 下载知乎App</span>
             </li>
         </ul>
-    
+    </div>
     <ul class="logon_text">
         <li>
             <span>知乎专栏</span>·
@@ -290,6 +295,7 @@
         </li>
     </ul>
 </div>
+<!-- 用户信息页面 -->
 <div class="myMaterial">
     <div class="mat_box">
         <div class="mat_header"></div>
@@ -365,14 +371,52 @@
 
     </div>
 </div>
+<!-- 评论区 -->
+<div class="mycomments">
+    <div class="mycom_container">
+        <div class="mycom_title">
+            回复
+            <span class="floatR mycom_close">×</span>
+            
+        </div>
+        <div class="mycom_container1"></div>
+    </div>
+</div>
+<!-- 聊天框 -->
+<div id="chat">
+    <span class="floatR chat_close">×</span>
+    <div class="chat_title">
+        
+    </div>
+    <ul class="chat_ul">
+    </ul>
+    <div class="chat_content">
+        <textarea rows="10" cols="30" class="chat_input">
+        </textarea><br/>
+        <button class="chat_btn floatR">发送</button>
+    </div>
+</div>
+<!-- 知乎右下角的小盒子 -->
 <ul id="Box">
     <li class="massage_box iconfont">&#xe659;</li>
     <li class="massage_box iconfont">&#xe53a;</li>
 </ul>
 </body>
 
-
-<script type="text/javascript" src="js/LneDemo.js"></script>
+<!-- 创建元素并声明元素 -->
+<script type="text/javascript" src="js/createElements.js"></script>
+<!-- 登录退出页面 -->
+<script type="text/javascript" src="js/logonAndlogout.js"></script>
+<!-- 获取文章及点赞/踩文章 -->
+<script type="text/javascript" src="js/article.js"></script>
+<!-- 获取用户信息及修改用户信息 -->
+<script type="text/javascript" src="js/userImformation.js"></script>
+<!-- 评论文章及点赞/踩/回复评论 -->
+<script type="text/javascript" src="js/comments.js"></script>
+<!-- 获取好友列表并发送获取信息 -->
+<script type="text/javascript" src="js/friends.js"></script>
+<!-- 其他一些点击鼠标移动事件 -->
+<script type="text/javascript" src="js/else.js"></script>
 
 
 </html>
